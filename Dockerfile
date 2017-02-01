@@ -17,5 +17,3 @@ RUN apt-get update && \
 # Install Captain v1.1.0
 RUN curl -sSL https://github.com/harbur/captain/releases/download/v1.1.0/captain_linux_amd64 > /usr/local/bin/captain && \
     chmod +x /usr/local/bin/captain
-
-USER jenkins
