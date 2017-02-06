@@ -17,3 +17,9 @@ RUN apt-get update && \
 # Install Captain v1.1.0
 RUN curl -sSL https://github.com/harbur/captain/releases/download/v1.1.0/captain_linux_amd64 > /usr/local/bin/captain && \
     chmod +x /usr/local/bin/captain
+
+# Install AWS
+RUN curl -sSL https://s3.amazonaws.com/aws-cli/awscli-bundle.zip > awscli-bundle.zip && \
+    unzip awscli-bundle.zip && \
+    ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws && \
+    rm -rf awscli-bundle*
