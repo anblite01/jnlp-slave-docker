@@ -31,3 +31,6 @@ RUN curl -sSL https://storage.googleapis.com/kubernetes-release/release/v1.5.2/b
 # Install Kops
 RUN curl -sSL https://github.com/kubernetes/kops/releases/download/1.5.1/kops-linux-amd64 > /usr/local/bin/kops && \
     chmod +x /usr/local/bin/kops
+
+# Link .dockerconfig to Jenkins user
+RUN ln -sf /root/.dockercfg /home/jenkins/
